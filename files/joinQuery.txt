@@ -1,0 +1,3 @@
+select bloodbank.bloodtype, bloodbank.expiry, bloodbank.avaiablity, coords.warehouse_coords 
+from bloodbank inner join coords on bloodbank.warehouse_coords 
+between (coords.warehouse_coords - 10) and (coords.warehouse_coords + 10);
